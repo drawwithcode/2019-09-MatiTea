@@ -1,15 +1,18 @@
+// background color
 let colorBack = {
   rBk: 24,
   gBk: 2,
   bBk: 12
 }
 
+// box color
 let colorBox = {
   rB: 99,
   gB: 75,
   bB: 102
 }
 
+// ribbon color
 let colorRib = {
   rR: 149,
   gR: 144,
@@ -32,6 +35,7 @@ function windowResized() {
 }
 
 function drawPresent() {
+  // gyroscope to rotate the present
   rotateX(rotationX * 0.1);
   rotateY(rotationY * 0.1);
   rotateZ(rotationZ * 0.1);
