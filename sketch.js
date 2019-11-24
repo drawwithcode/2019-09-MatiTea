@@ -19,8 +19,16 @@ let colorRib = {
   bR: 168
 }
 
+// initial scale value
+let present = {
+  size: 1
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
+
+  setShakeThreshold(50);
+
   normalMaterial();
 }
 
@@ -39,6 +47,8 @@ function drawPresent() {
   rotateX(rotationX * 0.1);
   rotateY(rotationY * 0.1);
   rotateZ(rotationZ * 0.1);
+
+  scale(present.size, present.size, present.size);
 
   // box
   push();
@@ -78,6 +88,10 @@ function touchStarted() {
   colorBack.rBk = random(0, 100);
   colorBox.rB = random(0, 200);
   colorRib.rR = random(0, 200);
+}
+
+function deviceShaken() {
+  present.size = random(0.2, 2);
 }
 
 function touchMoved() {
