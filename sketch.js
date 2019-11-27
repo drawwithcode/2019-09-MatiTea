@@ -27,7 +27,7 @@ let present = {
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
 
-  setShakeThreshold(50);
+  setShakeThreshold(40);
 
   normalMaterial();
 }
